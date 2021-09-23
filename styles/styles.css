@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Yaldevi:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Yaldevi", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fefbf3;
+  color: #9d9d9d;
+  font-size: 20px;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: #79b4b7;
+  color: #fefbf3;
+
+  text-shadow: 1px 1px #000000;
+}
+.nav {
+  position: fixed;
+  margin: 0 auto; left:0px; right:0px;
+  width: 95%;
+  margin: 0 auto 0 auto;
+  background-color: #79b4b7;
+  text-align: center;
+}
+.nav ul {
+  list-style: none;
+}
+.menu > li {
+  position: relative;
+  display: inline-block;
+}
+.menu > li > a {
+  display: block;
+  padding: 2em 2em;
+  color: #eaeaea;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #000000;
+}
+
+.menu li a:hover {
+  color: #f8f0df;
+  text-shadow: 0px 0px 20px #000000;
+  transition: all 0.3s;
+}
+
+/*submenu*/
+
+.submenu {
+  position: absolute;
+  background-color: #f8f0df;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.submenu li a {
+  display: block;
+  padding: 1em;
+  color: #9d9d9d;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+section {
+  padding-top: 5em;
+  padding-bottom: 1.8em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article h1 {
+  text-align: center;
+  font-size: 5em;
+  margin: 2em auto 2em auto;
+}
+article h2,
+h3 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+article p {
+  margin-bottom: 2em;
+  text-align: center;
+}
+article ol {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  list-style-position: inside;
+}
+
+.card img {
+  height: 10em;
+  width: 10em;
+  margin-left: auto;
+  margin-right: auto;
+}
+section #pr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  color: #fefbf3;
+  background-color: #e3dccc;
+  border-radius: 2em;
+  border-top: solid;
+  border-color: #79b4b7;
+  border-top-width: 1.3em;
+
+  padding: 2em 2em 2em;
+  width: 20em;
+  margin: 2em auto 2em auto;
+  text-align: center;
+}
+
+.card p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.card::selection {
+  background: #fefbf3;
+  color: #79b4b7;
+
+  text-shadow: 1px 1px #000000;
+}
+
+footer {
+  width: 95%;
+  margin: 1em auto auto auto;
+  background-color: #79b4b7;
+  text-align: center;
+}
+
+section article  p  a{
+    color:#f8f0df;
+    background-color: #79b4b7;
+}
