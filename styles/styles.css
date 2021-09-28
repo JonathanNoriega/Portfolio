@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Yaldevi", sans-serif;
+  font-family: "Yaldevi", Verdana, Tahoma;
 }
 html {
   scroll-behavior: smooth;
@@ -15,6 +15,7 @@ body {
   font-size: 1em;
   height: 100vh;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -26,7 +27,6 @@ body::-webkit-scrollbar {
   text-shadow: 1px 1px #000000;
 }
 .nav {
-  position: fixed;
   margin: 0 auto;
   left: 0px;
   right: 0px;
@@ -83,14 +83,16 @@ section {
   padding-top: 5em;
   padding-bottom: 1.8em;
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2.3em auto 2em auto;
+  scroll-snap-type: y proximity;
+  scroll-snap-stop: always;
+  height: 100vh;
 }
 
 article h1 {
   text-align: center;
   font-size: 5em;
-  margin: 2em auto 2em auto;
+  margin: 2.3em auto 2em auto;
 }
 article h2,
 h3 {
@@ -141,7 +143,9 @@ section #pr {
   width: 100%;
 }
 
-
+article{
+  scroll-snap-align: center;
+}
 footer {
   margin: 1em auto auto auto;
   background-color: #79b4b7;
@@ -153,6 +157,20 @@ section article p a {
   background-color: #79b4b7;
 }
 
+#contactme  {
+  padding-top: 70vh;
+  height: auto;
+
+}
+
+/* SNAP SCROLL
+html{
+  scroll-snap-type: y mandatory;
+}
+section {
+  scroll-snap-align: center;
+} */
+
 @media (max-width: 700px) {
   .nav {
     width: auto;
@@ -162,6 +180,10 @@ section article p a {
     font-size: 30px;
   }
 
+  section , #contactme{
+    padding-top: 0;
+    height: auto;
+  }
   footer {
     margin: 0;
     width: auto;
@@ -178,3 +200,5 @@ section article p a {
     height: 100vh;
   }
 }
+
+
