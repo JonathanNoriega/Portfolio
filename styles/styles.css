@@ -151,9 +151,7 @@ section #pr {
   animation-fill-mode: forwards;
 
 
-  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-  border: 1px solid #cccccc;
-  background-color: white;
+
 
 
 }
@@ -174,8 +172,10 @@ section #pr {
     border-top: solid;
     border-color: #BD4B4B;
     border-top-width: 1.3em;
-    transform: scale(1.1)
+    transform: scale(1.1);
 
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    background-color: white;
   }
 }
 
@@ -186,8 +186,10 @@ section #pr {
     border-top: solid;
     border-color: #BD4B4B;
     border-top-width: 1.3em;
-    transform: scale(1.1)
+    transform: scale(1.1);
 
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    background-color: white;
   }
   to {
     border-top: solid;
