@@ -11,8 +11,10 @@
     <meta name="description" content="Pure html and css portfolio" />
     <link rel="icon" href="img/emoji.ico">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>My portfolio</title>
   </head>
+
   <body>
 
       <header>
@@ -32,13 +34,13 @@
 
     <main class="wrapper">
 
-        <section id="Home">
+        <section id="home">
           <article>
             <h1><a name="me">Jonathan Noriega</a></h1>
           </article>
         </section>
         
-        <section>
+        <section id="wh">
           <article>
           <h2>¿Who am i?</h2>
           <p>My name is Jonathan Noriega, i'm a frontend developer, i'm 15 years old and i'm colombian. Currently studying at <a href="https://www.misiontic2022.gov.co/portal/" target="_blank" rel="noreferrer noopener">MinTIC</a>. <br>
@@ -49,20 +51,27 @@
 
         <section id="pro">
           <h3><a name="proyectos">Projects</a></h3>
-          <article id="pr">
-            <div class="card">
-              <img src="img/btc.png" alt="bitcoin">
-              <p>9dbtc is a script made to keep track on my 9 dollars bitcoin investment, 9dbtc saves bitcoin's price into log.xlsx every 30 minutes.</p>
-              <iframe src="https://ghbtns.com/github-btn.html?user=JonathanNoriega&repo=9dlbtc&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
-              <iframe src="https://ghbtns.com/github-btn.html?user=JonathanNoriega&repo=9dlbtc&type=star&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
-            </div>
-            <div class="card">
-              <img src="img/tijeras.png" alt="">
-              <p><br> Ppt is a Rock Scissors and paper game made using js. <br> <br></p>
-              <iframe src="https://ghbtns.com/github-btn.html?user=JonathanNoriega&repo=Rock-Scissors-and-Paper.&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
-              <iframe src="https://ghbtns.com/github-btn.html?user=JonathanNoriega&repo=Rock-Scissors-and-Paper.&type=star&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
-            </div>
-          </article>
+          <section id="pr">
+            <a href="https://github.com/JonathanNoriega/9dlbtc" target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
+              <article class="card">
+                <h1>9dbtc</h1>
+                <img src="img/btc.png" alt="bitcoin">
+                <!-- <p>9dbtc is a script made to keep track on my 9 dollars bitcoin investment, 9dbtc saves bitcoin's price into log.xlsx every 30 minutes.</p> -->
+                <!-- <iframe src="https://ghbtns.com/github-btn.html?user=JonathanNoriega&repo=9dlbtc&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                <iframe src="https://ghbtns.com/github-btn.html?user=JonathanNoriega&repo=9dlbtc&type=star&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe> -->
+              </article>
+            </a>
+
+            <a href="https://github.com/JonathanNoriega/Rock-Scissors-and-Paper." target="_blank" rel="noreferrer noopener" style="text-decoration: none;">
+              <article class="card">
+                <h1>Ppt</h1>
+                <img src="img/tijeras.png" alt="ppt logo">
+                <!-- <p><br> Ppt is a Rock Scissors and paper game made using js. <br> <br></p> -->
+                <!-- <iframe src="https://ghbtns.com/github-btn.html?user=JonathanNoriega&repo=Rock-Scissors-and-Paper.&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                <iframe src="https://ghbtns.com/github-btn.html?user=JonathanNoriega&repo=Rock-Scissors-and-Paper.&type=star&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe> -->
+              </article>
+            </a>
+          </section>
         </section>
 
         <section id="contactme">
@@ -78,6 +87,6 @@
           <li><a href="https://github.com/JonathanNoriega" target="_blank" rel="noreferrer noopener"><small>&copy; Copyright 2021, Jonathan Noriega</a>
         </ul>
       </footer>
-    
+      <script src="/src/index.js"></script>
   </body>
 </html>

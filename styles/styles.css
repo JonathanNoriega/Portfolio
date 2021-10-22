@@ -10,8 +10,10 @@ html {
   height: 100vh;
 }
 body {
-  background-color: #fefbf3;
-  color: #9d9d9d;
+  background-color: #F6F6F6;
+  background-image: url(/img/bkrg.png);
+  background-repeat: no-repeat;
+  color: #000000;
   font-size: 1em;
   height: 100vh;
 }
@@ -21,8 +23,8 @@ body::-webkit-scrollbar {
 }
 
 ::selection {
-  background: #79b4b7;
-  color: #fefbf3;
+  background: #BD4B4B;
+  color: #F6F6F6;
 
   text-shadow: 1px 1px #000000;
 }
@@ -30,9 +32,9 @@ body::-webkit-scrollbar {
   margin: 0 auto;
   left: 0px;
   right: 0px;
-  width: 95%;
+  width: 100%;
   margin: 0 auto 0 auto;
-  background-color: #79b4b7;
+  background-color: #BD4B4B;
   text-align: center;
 }
 .nav ul {
@@ -45,13 +47,13 @@ body::-webkit-scrollbar {
 .menu > li > a {
   display: block;
   padding: 2em 2em;
-  color: #eaeaea;
+  color: #F6F6F6;
   text-decoration: none;
   text-shadow: 0px 0px 0px #000000;
 }
 
 .menu li a:hover {
-  color: #f8f0df;
+  color: #F6F6F6;
   text-shadow: 0px 0px 20px #000000;
   transition: all 0.3s;
 }
@@ -60,7 +62,7 @@ body::-webkit-scrollbar {
 
 .submenu {
   position: absolute;
-  background-color: #f8f0df;
+  background-color: #F6F6F6;
   width: 100%;
   visibility: hidden;
   opacity: 0;
@@ -84,9 +86,8 @@ section {
   padding-bottom: 1.8em;
   width: 90%;
   margin: 2.3em auto 2em auto;
-  scroll-snap-type: y proximity;
-  scroll-snap-stop: always;
   height: 100vh;
+
 }
 
 article h1 {
@@ -111,7 +112,7 @@ article ol {
   list-style-position: inside;
 }
 
-.card img {
+ .card img {
   height: 10em;
   width: 10em;
   margin-left: auto;
@@ -120,56 +121,110 @@ article ol {
 section #pr {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 0;
+  align-content: space-around;
+  flex-direction: column;
 }
 .card {
-  color: #fefbf3;
-  background-color: #e3dccc;
-  border-radius: 2em;
+  border: 1px solid black;
+
   border-top: solid;
-  border-color: #79b4b7;
+  border-color: black;
   border-top-width: 1.3em;
 
-  padding: 2em 2em 2em;
+  display: flex;
+  flex-direction: column;
+  padding: 0em 2em 2em 2em;
   width: 20em;
   margin: 2em auto 2em auto;
   text-align: center;
+  align-content: center;
+
+  animation-name: card-hover-out;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+.card:hover{
+  animation-name: card-hover-in;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+
+
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  border: 1px solid #cccccc;
+  background-color: white;
+
+
 }
 
-.card p {
+
+
+
+@keyframes card-hover-in {
+  from {
+    border-top: solid;
+    border-color: black;
+    border-top-width: 1.3em;
+    transform: scale(1)
+  }
+  to {
+    border: 1px solid #BD4B4B;
+
+    border-top: solid;
+    border-color: #BD4B4B;
+    border-top-width: 1.3em;
+    transform: scale(1.1)
+
+  }
+}
+
+@keyframes card-hover-out {
+  from {
+    border: 1px solid #BD4B4B;
+
+    border-top: solid;
+    border-color: #BD4B4B;
+    border-top-width: 1.3em;
+    transform: scale(1.1)
+
+  }
+  to {
+    border-top: solid;
+    border-color: black;
+    border-top-width: 1.3em;
+    transform: scale(1)
+
+  }
+}
+
+.card h1 {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  font-weight: bolder;
+  color: #000000;
+  margin: 1em auto;
   width: 100%;
 }
 
-article{
-  scroll-snap-align: center;
-}
+
 footer {
   margin: 1em auto auto auto;
-  background-color: #79b4b7;
+  background-color: #BD4B4B;
   text-align: center;
 }
 
 section article p a {
-  color: #f8f0df;
-  background-color: #79b4b7;
+  color: #F6F6F6;
+  background-color: #BD4B4B;
 }
 
-#contactme  {
+#contactme {
   padding-top: 70vh;
   height: auto;
-
 }
 
-/* SNAP SCROLL
-html{
-  scroll-snap-type: y mandatory;
-}
-section {
-  scroll-snap-align: center;
-} */
+
+
 
 @media (max-width: 700px) {
   .nav {
@@ -180,7 +235,8 @@ section {
     font-size: 30px;
   }
 
-  section , #contactme{
+  section,
+  #contactme {
     padding-top: 0;
     height: auto;
   }
@@ -191,8 +247,8 @@ section {
   .menu li:hover .submenu {
     visibility: hidden;
   }
-  .menu li a:hover  {
-    color:#eaeaea;
+  .menu li a:hover {
+    color: #eaeaea;
   }
   body,
   html {
@@ -200,5 +256,3 @@ section {
     height: 100vh;
   }
 }
-
-
