@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Yaldevi:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Yaldevi", Verdana, Tahoma;
+}
+html {
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+body {
+  background-color: #262626;
+  color: #FFFFFF;
+  font-size: 1em;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: #BD4B4B;
+  color: #F6F6F6;
+
+  text-shadow: 1px 1px #000000;
+}
+.nav {
+  margin: 0 auto;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  background-color: #BD4B4B;
+  text-align: center;
+}
+.nav ul {
+  list-style: none;
+}
+.menu > li {
+  display: inline-block;
+}
+.menu > li > a {
+    display: block;
+    padding: 2em 2em;
+    color: #F6F6F6;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #000000;
+  }
+.menu{
+    position: relative;
+    height: 85px;
+}
+.menu li a:hover {
+  color: #F6F6F6;
+  text-shadow: 0px 0px 20px #000000;
+  transition: all 0.3s;
+}
+
+
+
+ .card img {
+  height: 10em;
+  width: 10em;
+  margin-left: auto;
+  margin-right: auto;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 0;
+  align-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 0em 2em 2em 2em;
+  width: 20em;
+  margin: 2em auto 2em auto;
+  text-align: center;
+  align-content: center;
+}
+
+
+
+
+
+
+.card h1 {
+  text-align: center;
+  font-weight: bolder;
+  margin: 1em auto;
+  width: 100%;
+}
+
+
+footer {
+  position: relative;
+  top: 0;
+  margin: 1em auto auto auto;
+  background-color: #BD4B4B;
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+@media (max-width: 446px) {
+  .menu #title{
+    visibility: hidden;
+  }
+}
+@media (max-width: 700px) {
+
+
+  footer {
+    margin: 0;
+    width: auto;
+  }
+
+  body,
+  html {
+    overflow-y: scroll;
+    height: 100vh;
+  }
+}

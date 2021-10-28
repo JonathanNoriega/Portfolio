@@ -28,18 +28,20 @@ body::-webkit-scrollbar {
 
   text-shadow: 1px 1px #000000;
 }
-.nav {
-  margin: 0 auto;
-  left: 0px;
-  right: 0px;
-  width: 100%;
-  margin: 0 auto 0 auto;
-  background-color: #BD4B4B;
-  text-align: center;
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+
+  padding-top: 5em;
+  padding-bottom: 1.8em;
+  width: 90%;
+  margin: auto;
+  height: 100vh;
 }
-.nav ul {
-  list-style: none;
-}
+
 .menu > li {
   position: relative;
   display: inline-block;
@@ -58,58 +60,18 @@ body::-webkit-scrollbar {
   transition: all 0.3s;
 }
 
-/*submenu*/
-
-.submenu {
-  position: absolute;
-  background-color: #F6F6F6;
-  width: 100%;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 1s;
-}
-.submenu li a {
-  display: block;
-  padding: 1em;
-  color: #9d9d9d;
-  text-align: center;
-  text-decoration: none;
-}
-
-.menu li:hover .submenu {
-  visibility: visible;
-  opacity: 1;
-}
-
-section {
-  padding-top: 5em;
-  padding-bottom: 1.8em;
-  width: 90%;
-  margin: 2.3em auto 2em auto;
-  height: 100vh;
-
-}
-
 article h1 {
   text-align: center;
   font-size: 5em;
   margin: 2.3em auto 2em auto;
 }
-article h2,
-h3 {
+.header{
   text-align: center;
   font-size: 2em;
   margin-bottom: 0.5em;
 }
 article p {
-  margin-bottom: 2em;
   text-align: center;
-}
-article ol {
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  list-style-position: inside;
 }
 
  .card img {
@@ -118,7 +80,7 @@ article ol {
   margin-left: auto;
   margin-right: auto;
 }
-section #pr {
+ #pr {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -149,10 +111,6 @@ section #pr {
   animation-name: card-hover-in;
   animation-duration: .5s;
   animation-fill-mode: forwards;
-
-
-
-
 
 }
 
@@ -220,41 +178,43 @@ section article p a {
   background-color: #BD4B4B;
 }
 
-#contactme {
-  padding-top: 70vh;
-  height: auto;
+@media (max-width: 804px) {
+
 }
 
-
-
-
 @media (max-width: 700px) {
-  .nav {
-    width: auto;
-    position: unset;
-  }
-  article h1 {
-    font-size: 30px;
-  }
 
-  section,
-  #contactme {
-    padding-top: 0;
+  article h1 {
+    font-size: 4em;
+  }
+  #pr{
+    flex-wrap: nowrap;
+  }
+  .header{
+    font-size: 3em;
+  }
+  p{
+    font-size: 2em;
+  }
+  #spotify{
+    padding-top: 500px;
     height: auto;
   }
-  footer {
-    margin: 0;
-    width: auto;
-  }
-  .menu li:hover .submenu {
-    visibility: hidden;
-  }
-  .menu li a:hover {
-    color: #eaeaea;
-  }
+
   body,
   html {
-    overflow-y: scroll;
     height: 100vh;
+  }
+}
+
+@media (min-height: 800px) {
+  body{
+    background-color: #ffd0cd;
+  }
+  .header{
+    font-size: 3em;
+  }
+  p{
+    font-size: 2em;
   }
 }
