@@ -15,6 +15,7 @@ body {
   background-repeat: no-repeat;
   color: #000000;
   font-size: 1em;
+  overflow-x: hidden;
   height: 100vh;
 }
 
@@ -35,10 +36,7 @@ section {
   justify-content: center;
   align-items: center; 
 
-  padding-top: 5em;
-  padding-bottom: 1.8em;
   width: 90%;
-  margin: auto;
   height: 100vh;
 }
 
@@ -48,7 +46,6 @@ section {
 }
 .menu > li > a {
   display: block;
-  padding: 2em 2em;
   color: #F6F6F6;
   text-decoration: none;
   text-shadow: 0px 0px 0px #000000;
@@ -63,12 +60,13 @@ section {
 article h1 {
   text-align: center;
   font-size: 5em;
-  margin: 2.3em auto 2em auto;
+  margin-top: 2.3em; 
 }
 .header{
   text-align: center;
   font-size: 2em;
   margin-bottom: 0.5em;
+  margin-top: 10em;
 }
 article p {
   text-align: center;
@@ -168,7 +166,7 @@ article p {
 
 
 footer {
-  margin: 1em auto auto auto;
+  margin-top: 1em;
   background-color: #BD4B4B;
   text-align: center;
 }
@@ -194,11 +192,13 @@ section article p a {
     font-size: 3em;
   }
   p{
-    font-size: 2em;
+    font-size: 1.5em;
+    margin-bottom: 10em;
+    margin-left: 3em;
+    margin-right: 3em;
   }
   #spotify{
     padding-top: 500px;
-    height: auto;
   }
 
   body,
@@ -208,6 +208,17 @@ section article p a {
 }
 
 @media (min-height: 800px) {
+  body{
+    background-color: #ffd0cd;
+  }
+  .header{
+    font-size: 3em;
+  }
+  p{
+    font-size: 2em;
+  }
+}
+@media (min-width: 800px) {
   body{
     background-color: #ffd0cd;
   }
