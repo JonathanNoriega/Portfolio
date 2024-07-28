@@ -3,13 +3,8 @@
 
 fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=JNoriega220&limit=10&api_key=36ed4e1fb9f4611b084d6e0ca19ef440&format=json')
 .then( response => response.json())
-.then(data => mostrarData(data))// output will be the required data
+.then(data => mostrarData(data))
 .catch( (error) => console.log(error))
-
-        
-
-// Calculate the 3 colors that repeat the most
-
 
 const mostrarData = (data) => {
     let body = ''
@@ -97,20 +92,39 @@ const mostrarData = (data) => {
 
 
 
-    for(let i = 0; i < n_data.length; i++){
-        body+= `
-        <div class="song-card" style="display:flex; flex-direction: column; width: 128px; margin-left: 0.35vw; margin-right: 0.35vw;" >
-            <a href=${n_data[i]['url']} target=”_blank”>
-                <img class="song-album" src=${n_data[i]['image'][2]['#text']} height="128px" width="128px" alt="Album image">
-                </img>
-            </a>
-            <h2 class="song-title" style="font-size:13px; font-weight: lighter;  flex-grow:1;">${n_data[i]['name']}</h2>
-        </div>
-        `
-        document.getElementById('songs').innerHTML = body
+        for(let i = 0; i < n_data.length; i++){
+                body+= `
+                <div class="song-card" style="display:flex; flex-direction: column; width: 128px; margin-left: 0.35vw; margin-right: 0.35vw;" >
+                    <a href=${n_data[i]['url']} target=”_blank”>
+                        <img class="song-album" src=${n_data[i]['image'][2]['#text']} height="128px" width="128px" alt="Album image">
+                        </img>
+                    </a>
+                    <h2 class="song-title" style="font-size:13px; font-weight: lighter;  flex-grow:1;">${n_data[i]['name']}</h2>
+                </div>
+                `
+                document.getElementById('songs').innerHTML = body
+                
+            
 
 
-    }    
+                }    
 
+    }else{
+        for(let i = 0; i < n_data.length; i++){
+            body+= `
+            <div class="song-card" style="display:flex; flex-direction: column; width: 128px; margin-left: 0.35vw; margin-right: 0.35vw;" >
+                <a href=${n_data[i]['url']} target=”_blank”>
+                    <img class="song-album" src=${n_data[i]['image'][2]['#text']} height="128px" width="128px" alt="Album image">
+                    </img>
+                </a>
+                <h2 class="song-title" style="font-size:13px; font-weight: lighter;  flex-grow:1;">${n_data[i]['name']}</h2>
+            </div>
+            `
+            document.getElementById('songs').innerHTML = body
+            }
     }
+
+
+    
 }
+
